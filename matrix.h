@@ -1,4 +1,3 @@
-#include "number.h"
 using namespace std;
 namespace utec{
   class matrix{
