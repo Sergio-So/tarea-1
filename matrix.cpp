@@ -1,21 +1,21 @@
 #include "matrix.h"
-using namespace utec;
-matrix_t::matrix_t(int fil, int col):fila(fil),columna(col){
-  matrix.resize(fila);
-  for(int i=0;i<fila;i++){
-        matrix[i].resize(columna);
-
-        for(int j=0;j<columna;j++){
-            matrix[i][j]=nullptr;
+#include <time.h>
+using namespace std;
+int main() {
+  srand(time(NULL));
+  utec::matrix m1(4, 5);
+    for (int i = 0; i < m1.row_size(); ++i) {
+        for (int j = 0; j < m1.col_size(); ++j) {
+             m1(i, j) = new integer_t(rand() % 100);
         }
     }
-}
-int matrix_t::row_size(){
-  return fila;
-}
-int matrix_t::col_size(){
-  return columna;
-}
-number_t* &matrix_t::operator() (int i, int j) {
-    return matrix[i][j];
+    std::cout <<"Matrix 1:"<<endl<<m1;
+    utec::matrix m2 = m1;
+    
+    for (int i = 0; i < m2.row_size(); ++i) {
+        for (int j = 0; j < m2.col_size(); ++j) {
+            m2(i, j) = new real_t(rand() % 100);
+        }
+    }
+    std::cout <<"Matrix 2:"<<endl<<m2;
 }
