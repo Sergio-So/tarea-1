@@ -11,7 +11,7 @@ namespace utec{
     int row_size();
     int col_size();
     number_t* &operator()(int i, int j);
-    matrix_t& operator=(matrix& m);
+    matrix_t& operator=(matrix_t& m);
     friend ostream& operator<<(ostream& salida,matrix_t& m){
       for(int i=0;i< m.row_size();i++){
         for(int j=0;j<m.col_size();j++){
