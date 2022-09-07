@@ -1,6 +1,6 @@
 #include "matrix.h"
 using namespace utec;
-matrix::matrix(int fil, int col):fila(fil),columna(col){
+matrix_t::matrix_t(int fil, int col):fila(fil),columna(col){
   matrix_1.resize(fila);
   for(int i=0;i<fila;i++){
         matrix_1[i].resize(columna);
@@ -10,12 +10,12 @@ matrix::matrix(int fil, int col):fila(fil),columna(col){
         }
     }
 }
-int matrix::row_size(){
+int matrix_t::row_size(){
   return fila;
 }
-int matrix::col_size(){
+int matrix_t::col_size(){
   return columna;
 }
-number_t* &matrix::operator() (int i, int j) {
+number_t* &matrix_t::operator() (int i, int j) {
     return matrix_1[i][j];
 }
