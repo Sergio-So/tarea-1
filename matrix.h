@@ -17,6 +17,6 @@ namespace utec{
         for(int j=0;j<m.col_size();j++){
         if(m(i,j)->get_type()=='i')
           salida << m(i,j)->num()<<" ";
-        else salida << m(i,j)->num()<<" "; }
+        else salida << m(i,j)->num()<<"  "; }
         salida<<endl;
         }return salida;}};}
